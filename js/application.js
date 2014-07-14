@@ -26,19 +26,44 @@ $(document).ready(function(){
 //delete list items
 	$('#list').on('click', '.delete', function(e){e.preventDefault(); $(this).parent().remove()});
 
+//change theme to a
+	$('.theme-bar').on('click', '.theme-select-a', function(){
+		$("#theme-class").attr("href", "css/main.css");});
+
+
+//change theme to b
+	$('.theme-bar').on('click', '.theme-select-b', function(){
+		$("#theme-class").attr("href", "css/themeb.css");});
+
+//show menu
+	$('#menu-btn-container').on('click', '#menu-btn', function(){
+		$('#menu').toggleClass('hide'); });
+
+//toggle instructions
+	$('.theme-bar').on('click', '.instructions', function(){
+		$('#instructions').toggleClass('hide'); });
+
+//close instructions
+	$('#instructions').on('click', '.close-btn', function(){
+		$('#instructions').toggleClass('hide'); });
+
 //cross off list items
 	$('#list').on('click', 'li', 
-		function(){$(this).toggleClass('strike'); 
+		function(){$(this).toggleClass('selected'); 
 		$(this).children('.box').toggleClass('Checked');});
 
 //sortable list items
 	$('#list').sortable({ axis: "y" });
 	
 //show delete button on mouse hover
-	$('#list').on('mouseenter', 'li', function(){$(this).children('.delete').toggleClass('show');});
-	$('#list').on('mouseleave', 'li', function(){$(this).children('.delete').toggleClass('show');});
+	$('#list').on('mouseenter', 'li', function(){
+		$(this).children('.delete').toggleClass('show');});
+	$('#list').on('mouseleave', 'li', function(){
+		$(this).children('.delete').toggleClass('show');});
 
-$('.box').addClass('inner-box');
+
 
 });
+    
+    
 

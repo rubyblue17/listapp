@@ -151,7 +151,6 @@ body {
 		background: #f9f9f9;
 		color:cornflowerblue;
 		font-size: 22px;
-		display: none;
 } 
 
 
@@ -511,4 +510,145 @@ h2 {
 html, body, .container {
     width: 320px !important;
 }	
+}
+
+
+/* THEME B */
+/* THEME B */
+/* THEME B */
+/* THEME B */
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	background: #000;
+	color: #fff;
+}
+
+
+
+
+
+.theme-select-a {
+		background: cornflowerblue;
+		color:#fff;
+		font-size: 22px;
+} 
+
+.theme-select-b {
+	display: none;
+}
+ 
+h2 {
+	color: #aaa;
+}
+
+#item {
+	background: #777;
+	color: #fff;
+	border:2px solid;
+}
+
+.items {
+	background: #bbb;
+}
+
+#add {
+	background: #eee;
+	border: 1px solid #eee;
+}
+
+
+
+
+#list {
+	margin-top: 30px;
+	/* padding: 5px 5px 5px 15px; */
+	text-align: left;
+	list-style: none;
+	width: 100%;
+	border-right: 1px solid #eee;
+	/* background: darkkhaki; */
+}
+
+#list li { 
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+
+.box { 
+	background: tomato;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+
+
+.Checked {
+	background: #555;
+ 		
+	border-top: 1px solid #555 !important;
+	border-bottom: 1px solid #555 !important;
+
+}
+
+
+.selected {
+	background: #333;
+	color: #555 !important;
+	 
+} 
+.delete {
+	background: coral;
+	color: white;
+	opacity: 0.5;
+}
+
+.themes:hover {
+	background:#444;
+}
+
+h1 {
+	background:#444;
+}
+
+#menu {
+	background:#fff;
+}
+
+#menu-btn {
+		background:#fff;
+
+}
+
+#menu-btn p {
+ color:#777;
+
+} 
+
+#instructions {
+	background: #333;
+	border-top: 12px solid coral;
+} 
+
+#instructions ol {
+	list-style-type:decimal;
+	list-style-position: initial;
+	padding: 0 0px 0 48px;
+	/* opacity: 0.9 !important; */
+}
+
+#instructions ol li {
+	padding: 0 20x 20px 0;
 }

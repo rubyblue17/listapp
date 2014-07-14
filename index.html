@@ -4,8 +4,9 @@
 	<head>
 		<link rel="stylesheet" href="css/reset.css">
 
-		<link type="text/css" rel="stylesheet" href="css/main.css"/>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link id="theme-class" type="text/css" rel="stylesheet" href="css/main.css"/>
+	
+	<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="js/application.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<title>Shopping List</title>
@@ -17,17 +18,29 @@
 
 		
 	</head>
-	<body class="theme-a">
-		<div class="container">
-			<ul class="themes">
-				<li class="theme-select">THEME A</li>
-				<li class="theme-select">THEME B</li>
-			</ul>	
-			<div class="input">
+	<body>
+	<div class="container">
+
+
+	
+			<div id="menu-btn-container">
+				<div id="menu-btn"><p>&equiv;</p></div>
+					<div id="menu" class="hide">
+				<ul class="theme-bar">
+					<li class="themes instructions">INSTRUCTIONS</li>
+					<li class="themes theme-select-a">SWITCH TO THEME A</li>
+					<li class="themes theme-select-b">SWITCH TO THEME B</li>
+	
+				</ul>	
+				</div>	
+
+				</div>		
 				<h1>List &times; Items</h1>
-				<input id="item"></input>
+				<div class="input">
+
+		
+				<input id="item" placeholder="enter item"></input>
 				<button type="submit" id="add">+</button></br>
-				<h2>Drag items to sort </h2>
 				<ul id="list">
 					<li class="items">
 					<div class="box"></div>
@@ -47,6 +60,18 @@
 					<span>Milk</span>
 					<div class="delete">&times;</div></li>
 				</ul>
+			<div id="instructions" class="hide">
+				<ol>
+					<li>To add item to list, type item in box and press enter or click green add ('+') button.</li>
+					<li>Click list item once to mark as complete.</li>
+					<li>Hover over list item to see delete option. Click on delete ('&times;') to remove item from list.</li>
+					<li>To re-arrange items (re-sort), click on item and hold down to drag.</li>
+					<li><em>Edit item (coming soon)</em></li>
+				</ol>
+			<div class="close-btn">CLOSE</div>
+			</div>					
+				</div>
+	
 		</div>	
 	</body>
 </html>
