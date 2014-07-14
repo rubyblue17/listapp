@@ -11,20 +11,45 @@ body {
 }
 .container { 
 	width: 650px;
-	margin: 0 auto;
+	margin: 40px auto;
 	/* background:thistle; */
 } 
 .input {
 	width: 500px;
-	margin: 0 auto; 
+	margin:auto; 
 	border-radius: 2px;
 	text-align: center;
+	position:relative; 
 	/* background:cyan; */
 	/* background-image: url('images/lines.png'); */
 }
+.themes {
+	width: 650px;
+	/* background:thistle; */
+	position:absolute;
+	top: 0;
+	margin: auto;
+	text-align:center;
+}
+
+.theme-select {
+		display:inline-block;
+		background: #eee;
+		width: 245px;
+		height:35px;
+		margin: 0 5px 0 5px;
+	
+		padding: 18px 0px 0 0px;
+		font-weight: 100;
+	/* vertical-align: baseline; */
+	font-family:'Roboto', Arial;
+
+}
+
+
 h1 {
-	margin-top: 3px;
-	padding-top: 20px;
+	/* margin-top: 17px; */
+	padding-top: 69px;
 	font-size: 48px;
 	margin-bottom: 10px;
 		font-family:'Open Sans', Arial;
@@ -219,20 +244,33 @@ span {
 }
 
 
+/* end theme A */
+/* end theme A */
+/* end theme A */
+
+
+
+/* begin theme B */
+/* begin theme B */
+/* begin theme B */
+/* begin theme B */
+
+
+
+
 /* BEGIN MOBILE CSS */
 @media only screen and (max-device-width: 480px) {
     html {
-		width:300px;
+		width:640px;
 	}
 	
 	body {
-		width:300px;
-		margin:0;
-		border-top:10px solid #aaa;
+		width:640px;
+		margin:10px auto;
 	}
 	
 	.container, {
-      width: 300px;
+      width: 100%;
 	  margin:0;
 	  
     }
@@ -247,7 +285,8 @@ span {
       width: 100%;
 	  margin:20px auto !important;
 	  position:absolute !important;
-	  top:245px !important;
+	  
+      top: 285px !important;
 	  
     }
 	
@@ -255,14 +294,14 @@ span {
 		font-size:24px;
 	}
 .input {
-	      width: 320px;
-		  margin:0;
+	      width: 100%;
+		  margin:auto;
 		  padding:0;
 		  position:absolute;
 		top:0;
 		left:0;
 		right:0;
- 
+  
 
 }
 input {
@@ -271,15 +310,18 @@ input {
 }
 
 #add {
-	width:100%;
-	margin:0 0 30px 0;
+	width:97% !important;
+	position:absolute;
+	left:0;
+	top:210px;
+	margin:0px 11px auto !important;
+	
 }
 
 h1 {
 	padding-top: 0px;
 	font-size: 48px;
-	margin:15px 20px auto;
-	text-align:left;
+	margin:25px auto;
 
 }
 
