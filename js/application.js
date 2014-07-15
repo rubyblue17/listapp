@@ -35,6 +35,10 @@ $(document).ready(function(){
 	$('.theme-bar').on('click', '.theme-select-b', function(){
 		$("#theme-class").attr("href", "css/themeb.css");});
 
+	$('.theme-bar').on('click', '.theme-mobile-b', function(){
+		$("#theme-class").attr("href", "css/themeb.css");});
+
+
 //show menu
 	$('#menu-btn-container').on('click', '#menu-btn', function(){
 		$('#menu').toggleClass('hide'); });
