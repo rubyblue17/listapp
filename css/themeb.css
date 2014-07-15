@@ -151,7 +151,7 @@ body {
 		background: #f9f9f9;
 		color:cornflowerblue;
 		font-size: 22px;
-			display: none;
+			display: inline-block;
 	
 } 
 
@@ -165,7 +165,7 @@ body {
 } 
 
 .theme-mobile-a {
-	display:inline-block	;
+	display:none;
 }
 
 
@@ -871,12 +871,12 @@ display:none;
 
 }
 
-.theme-mobile-a, .theme-mobile-b {
-	display: inline-block;
-}
+
 
 .theme-mobile-a {
 		display: inline-block;
+		background:cornflowerblue !important;
+		color:white !important;
 } 
 
 

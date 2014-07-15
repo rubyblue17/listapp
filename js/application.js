@@ -30,6 +30,8 @@ $(document).ready(function(){
 	$('.theme-bar').on('click', '.theme-select-a', function(){
 		$("#theme-class").attr("href", "css/main.css");});
 
+	$('.theme-bar').on('click', '.theme-mobile-a', function(){
+		$("#theme-class").attr("href", "css/main.css");});
 
 //change theme to b
 	$('.theme-bar').on('click', '.theme-select-b', function(){
