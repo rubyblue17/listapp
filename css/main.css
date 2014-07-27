@@ -27,11 +27,15 @@ body {
 	display: none;
 	height:90%;
 	font-size: 29px; 
-	color: #238F4E !important;
 	font-weight: 300;
-	color: #333;
 	font-family:'Open Sans', Arial;
  	
+}
+
+input.edit {
+	background:transparent;
+	border:0px;	
+	
 }
   
 #instructions {
