@@ -1,30 +1,40 @@
-$(document).ready(function(){
+$(document).ready(function() {
+    $("#add_item").submit(handleAddItem);
 
-// use enter to add list items
-	$('#item').keyup(function(event){
+//add list items
+function handleAddItem() {
+
+		var txtbox = document.getElementById('enter-item');
+		var itemtext = txtbox.value;
+		event.preventDefault();
+
+			$('<li class="list-item" class="edit-item"></li>').appendTo('#list').html('<div class="item-container"><span class="display">' + itemtext + '</span><input type="text" class="edit"/><div class="line-menu"><div class="delete">&times;</div><div class="editbox"></div><div class="mark"></div></div></div>');
+		txtbox.value = '';
+	}
+
+
+//edit list items
+$('#list').on('click', '.editbox', function(e){
+	event.preventDefault(); 
+	$(this).parent().siblings(".display").hide();
+	$(this).parent().siblings(".edit").show().val($(this).parent().siblings(".display").text()).focus();
+	});
+
+$(".edit").focusout(function(){
+	event.preventDefault();
+	$(this).hide();  
+	$(this).siblings(".display").show().text($(this).val());
+});
+
+$('.edit').keyup(function(event){
 		if(event.keyCode == 13) {
 			event.preventDefault();
-			$('#add').click();
+			$(this).hide();  $(this).siblings(".display").show().text($(this).val());
+
 		};
 	});	
 
-//add list items
-	$('#add').click(function(){
-		var txtbox = document.getElementById('item');
-		var txtval = txtbox.value;
-		event.preventDefault();
 
-		if(!$.trim($('#item').val())) {
-			alert('Please enter text to add to the list');
-		} else {
-			$('<li class="items"></li>').appendTo('#list').html('<div class="box"></div><span>' + txtval + '</span><div class="delete">&times;</div>');
-
-		document.getElementById('item').value = '';
-		};
-	});
-
-//delete list items
-	$('#list').on('click', '.delete', function(e){e.preventDefault(); $(this).parent().remove()});
 
 //change theme to a
 	$('.theme-bar').on('click', '.theme-select-a', function(){
@@ -40,36 +50,46 @@ $(document).ready(function(){
 	$('.theme-bar').on('click', '.theme-mobile-b', function(){
 		$("#theme-class").attr("href", "css/themeb.css");});
 
-
 //show menu
 	$('#menu-btn-container').on('click', '#menu-btn', function(){
 		$('#menu').toggleClass('hide'); });
 
 //toggle instructions
-	$('.theme-bar').on('click', '.instructions', function(){
-		$('#instructions').toggleClass('hide'); });
+	$('#bottom').on('click', '.instructions', function(){
+		$('#instructions').toggleClass('hide'); 
+		$('#list').toggleClass('hide');
+		});
 
-//close instructions
+//close instructions with close button
 	$('#instructions').on('click', '.close-btn', function(){
-		$('#instructions').toggleClass('hide'); });
+		$('#instructions').toggleClass('hide'); 
+		$('#list').toggleClass('hide');
+	});
 
-//cross off list items
-	$('#list').on('click', 'li', 
-		function(){$(this).toggleClass('selected'); 
-		$(this).children('.box').toggleClass('Checked');});
+//toggle legend icons
+	$('#bottom').on('click', '.legend', function(){
+		$('#legend-icons').toggleClass('hide'); 
+		});	
+
+//delete list items
+	$('#list').on('click', '.delete', 
+		function(e){e.preventDefault(); 
+			$(this).parentsUntil('#list').remove()});
+
+//mark list items complete
+	$('#list').on('click', '.mark', 
+		function(){
+			$(this).parentsUntil('#list').toggleClass('complete'); 
+			});
 
 //sortable list items
 	$('#list').sortable({ axis: "y" });
 	
-//show delete button on mouse hover
+//show line item menu on mouse hover
 	$('#list').on('mouseenter', 'li', function(){
-		$(this).children('.delete').toggleClass('show');});
+		$(this).find('.line-menu').toggleClass('show');});
 	$('#list').on('mouseleave', 'li', function(){
-		$(this).children('.delete').toggleClass('show');});
-
+		$(this).find('.line-menu').toggleClass('show');});	
 
 
 });
-    
-    
-

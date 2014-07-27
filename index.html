@@ -3,15 +3,12 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/reset.css">
-
 		<link id="theme-class" type="text/css" rel="stylesheet" href="css/main.css"/>
-	
-	<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="js/application.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<title>Shopping List</title>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans">
 
@@ -20,62 +17,97 @@
 	</head>
 	<body>
 	<div class="container">
-
-
-	
-			<div id="menu-btn-container">
-				<div id="menu-btn"><p>&equiv;</p></div>
-					<div id="menu" class="hide">
-				<ul class="theme-bar">
-					<li class="themes instructions">INSTRUCTIONS</li>
-					<li class="themes theme-select-a">SWITCH TO THEME A</li>
-					<li class="themes theme-select-b">SWITCH TO THEME B</li>
-					<li class="themes theme-mobile-a">THEME A</li>
-					<li class="themes theme-mobile-b">THEME B</li>
-
-	
-				</ul>	
-				</div>	
-
-				</div>		
-				<h1>List &times; Items</h1>
-				<div class="input">
-
-		
-				<input id="item" placeholder="enter item"></input>
-				<button type="submit" id="add">+</button></br>
-				<ul id="list">
-					<li class="items">
-					<div class="box"></div>
-					<span>Item 1</span>
-					<div class="delete">&times;</div>
-					</li>
-					<li class="items">
-					<div class="box"></div>
-					<span>Item 2</span>
-					<div class="delete">&times;</div></li>
-					<li class="items">
-					<div class="box"></div>
-					<span>Item 3</span>
-					<div class="delete">&times;</div></li>
-					<li class="items">
-					<div class="box"></div>
-					<span>Item 4</span>
-					<div class="delete">&times;</div></li>
-				</ul>
-			<div id="instructions" class="hide">
-				<ol>
-					<li>To add item to list, type item in box and press enter or click green add ('+') button.</li>
-					<li>Click list item once to mark as complete.</li>
-					<li>Hover over list item to see delete option. Click on delete ('&times;') to remove item from list.</li>
-					<li>To re-arrange items (re-sort), click on item and hold down to drag.</li>
-					<li><em>Edit item (coming soon)</em></li>
-				</ol>
+	<h1>List &times; Items</h1>
+	<div class="input">	
+		<form id="add_item">
+		<input id="enter-item" name="enter_item" placeholder="enter item">
+		<input type="submit" id="add-btn" value="+">
+	    </form>
+		<br>
+	</div> <!-- .input -->
+	<div id="wrapper">
+		<div id="instructions" class="hide">
+			<ol>
+			<li>To add item to list, type item in box and press enter or click green add ('+') button.</li>
+			<li>Hover over any item line to show its menu:</li>
+			<ul>
+				<li>To mark complete, click check mark.</li>
+				<li>To edit, click edit/pencil.</li>
+				<li>To delete, click "&times;"</li>
+			</ul>	
+			<li>To re-arrange list-item (re-sort), click on item and hold down to drag.</li>
+			</ol>
 			<div class="close-btn">CLOSE</div>
-			</div>					
+		</div>	<!-- #instructions -->				
+
+		<ul id="list">
+			<li class="list-item" class="edit-item">
+			<div class="item-container">
+				<span class="display">Item 1</span>
+				<input type="text" class="edit"/>			
+				<div class="line-menu">
+					<div class="delete">&times;</div>
+					<div class="editbox"></div>
+					<div class="mark"></div>
 				</div>
+			</div>
+			</li>
+			<li class="list-item" class="edit-item">
+			<div class="item-container">
+				<span class="display">Item 2</span>
+				<input type="text" class="edit"/>			
+				<div class="line-menu">
+					<div class="delete">&times;</div>
+					<div class="editbox"></div>
+					<div class="mark"></div>
+				</div>
+			</div>
+			</li>
+			<li class="list-item" class="edit-item">
+			<div class="item-container">
+				<span class="display">Item 3</span>
+				<input type="text" class="edit"/>			
+				<div class="line-menu">
+					<div class="delete">&times;</div>
+					<div class="editbox"></div>
+					<div class="mark"></div>
+				</div>
+			</div>
+			</li>
+			<li class="list-item" class="edit-item">
+			<div class="item-container">
+				<span class="display">Item 4</span>
+				<input type="text" class="edit"/>			
+				<div class="line-menu">
+					<div class="delete">&times;</div>
+					<div class="editbox"></div>
+					<div class="mark"></div>
+				</div>
+			</div>
+			</li>
+		</ul>
+	</div> <!-- #wrapper -->
+	<div id="bottom">
+		<ul>
+		<li class="instructions">&equiv;  TOGGLE INSTRUCTIONS  &uarr;</li>
+		<li class="legend">&equiv;  TOGGLE LEGEND  &darr;</li>
+
+			<ul id="legend-icons" class="hide">
+			<li>
+			<table>
+				<tr>
+					<td><span class="times">&times;</span> : Edit</td>
+					<td><img src="images/edit.png" opacity="0.6" alt="">: Edit</td>
+					<td><img src="images/check.png" opacity="0.6" alt="">:Mark Complete</td>
+					<td></td>
+				</tr>
+			</table>
+			</li>
+			</ul>
+		</ul>	
+	</div>
 	
-		</div>	
+	</div>	<!-- #container -->
 	</body>
 </html>
 

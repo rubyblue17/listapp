@@ -1,11 +1,6 @@
 body {
-	/*  web font from http://fontspace.com/bythebutterfly/cutie-patootie  */
-	
-	/* font-family: 'cutie-patootie'; */
-	/* background-image: url('images/kitchen.png'); */
-	/* background-repeat: no-repeat; */
-	/* background-position: top center; */
-}
+
+} 
 *{
 	/* outline: 1px solid red; */
 }
@@ -22,12 +17,19 @@ body {
 	margin-right: auto;
 	border-radius: 2px;
 	text-align: center;
-	/* position: absolute; */ 
-	/* top: 60px; */
-	/* display: inline; */
-	/* background:cyan; */
-	/* background-image: url('images/lines.png'); */
 } 
+
+.edit {
+	display: none;
+	height:90%;
+	/* padding:2px; */
+	font-size: 29px; 
+	color: #238F4E !important;
+	font-weight: 300;
+	color: #333;
+	font-family:'Open Sans', Arial;
+ 	
+}
   
 #instructions {
 	width: 502px;
@@ -45,15 +47,12 @@ body {
 	font-size:24px;
 	font-weight:300;
 	line-height:30px;
-	/* display: none; */
-	/* display: block; */
 } 
 
 #instructions ol {
 	list-style-type:decimal;
 	list-style-position: initial;
 	padding: 0 0px 0 48px;
-	/* opacity: 0.9 !important; */
 }
 
 #instructions ol li {
@@ -63,7 +62,6 @@ body {
 .theme-bar {
 	width: 100%;
 	min-width: 640px;
-	/* background:thistle; */
 	position:relative;
 	top: 5px;
 	margin: auto;
@@ -84,7 +82,6 @@ body {
 	top: 80px;
 	left: 0;
 	right: 0;
-	/* display: none; */
 }
 
 #menu-btn {
@@ -92,7 +89,6 @@ body {
 	width: 82px;
 	height: 79px;
 	margin:1px 0 0 0;
-	/* position:absolute; */
 	float: right; 
 }
 
@@ -103,16 +99,8 @@ body {
 #menu-btn p {
 	margin: 0px 0 0px 0;
 	color:white;
-	/* display: block; */
-	/* position: absolute; */
-	/* padding: 0 0 40px 0; */
-	/* top: 0; */
-	/* bottom: 20px; */
-	/* background: pink; */
 	width: 82px;
-	/* height: 22px; */
 	font-weight: 300;		
-	/* vertical-align: baseline; */
 	font-family: 'Open Sans', Arial;
 		
 	font-size: 75px;
@@ -129,9 +117,6 @@ body {
 	position: absolute; 
 	top: 0;
 	left: inherit;
-	/* right: inherit; */
-	/* display: block; */
-	/* background: pink; */
 }
 
 .themes {
@@ -142,7 +127,6 @@ body {
 		padding: 18px;
 		font-size: 22px;
 		font-weight:300;		
-	/* vertical-align: baseline; */
 	font-family:'Roboto', Arial;
 
 } 
@@ -151,8 +135,7 @@ body {
 		background: #f9f9f9;
 		color:cornflowerblue;
 		font-size: 22px;
-			display: inline-block;
-	
+		display: none;
 } 
 
 
@@ -160,22 +143,14 @@ body {
 		background: #333;
 		color:#eee;
 		font-size: 22px;
-		display: none;
 
 } 
 
-.theme-mobile-a {
-	display:none;
-}
-
-
-
-.theme-mobile-b {
+.theme-mobile-a, .theme-mobile-b {
 	display: none;
 }
 
 .close-btn {
-		/* display:inline-block; */
 		background: #eee;
 		width: 200px;
 		text-align:center;
@@ -183,7 +158,6 @@ body {
 	
 		padding: 20px;
 		font-weight: 100;
-	/* vertical-align: baseline; */
 	font-family:'Roboto', Arial;
 	background:coral !important;
 	color:white;
@@ -219,7 +193,6 @@ li.themes:active {
 
   
 h1 {
-	/* margin-top: 17px; */
 	padding: 10px 80px 10px 0;
 	font-size: 48px;
 	height:60px;
@@ -401,17 +374,51 @@ span {
 	/* position: absolute; */
 	display: none;
 	background: #fff;
-	opacity: 0.6;
+	opacity: 0.4;
 	color: tomato;
 	font-size:110px; 
 	line-height: 62px;
 	font-weight: 100;
 	text-align:center;
+	cursor: default;
 	/* vertical-align: baseline; */
 	font-family:'Roboto', Arial;
 	/* border-top: 1px solid #fff; */
 	/* border-bottom: 1px solid #fff; */
 	
+}
+
+li .delete:hover {
+	opacity: 0.7;
+}
+
+.editbox {
+	float: right;
+	margin-top: 0px;
+	border: 0;
+	/* padding: 4px 0 0 0px; */ 
+	width: 60px;
+	height: 70px;
+	/* position: absolute; */
+	display: none;
+	background: #fff;
+	opacity: 0.6;
+	color: cornflowerblue;
+	font-size: 25px; 
+	line-height: 69px;
+	font-weight: 100;
+	text-align:center;
+	cursor: default;
+	text-transform: uppercase;
+	/* vertical-align: baseline; */
+	font-family:'Roboto', Arial;
+	/* border-top: 1px solid #fff; */
+	/* border-bottom: 1px solid #fff; */
+	
+}
+
+.editbox:hover {
+	opacity:0.8;
 }
 
 .delete2 {
@@ -614,149 +621,6 @@ line-height: 27px;
 }
 
 }
-
-/* THEME B */
-/* THEME B */
-/* THEME B */
-/* THEME B */
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-	background: #000;
-	color: #fff;
-}
-
-
-
-
-
-.theme-select-a {
-		background: cornflowerblue;
-		color:#fff;
-		font-size: 22px;
-} 
-
-.theme-select-b {
-	display: none;
-}
- 
-h2 {
-	color: #aaa;
-}
-
-#item {
-	background: #777;
-	color: #fff;
-	border:2px solid;
-}
-
-.items {
-	background: #bbb;
-}
-
-#add {
-	background: #eee;
-	border: 1px solid #eee;
-}
-
-
-
-
-#list {
-	margin-top: 30px;
-	/* padding: 5px 5px 5px 15px; */
-	text-align: left;
-	list-style: none;
-	width: 100%;
-	border-right: 1px solid #eee;
-	/* background: darkkhaki; */
-}
-
-#list li { 
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
-}
-
-
-.box { 
-	background: tomato;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-}
-
-
-
-.Checked {
-	background: #555;
- 		
-	border-top: 1px solid #555 !important;
-	border-bottom: 1px solid #555 !important;
-
-}
-
-
-.selected {
-	background: #333;
-	color: #555 !important;
-	 
-} 
-.delete {
-	background: coral;
-	color: white;
-	opacity: 0.5;
-}
-
-.themes:hover {
-	background:#444;
-}
-
-h1 {
-	background:#444;
-}
-
-#menu {
-	background:#fff;
-}
-
-#menu-btn {
-		background:#fff;
-
-}
-
-#menu-btn p {
- color:#777;
-
-} 
-
-#instructions {
-	background: #333;
-	border-top: 12px solid coral;
-} 
-
-#instructions ol {
-	list-style-type:decimal;
-	list-style-position: initial;
-	padding: 0 0px 0 48px;
-	/* opacity: 0.9 !important; */
-}
-
-#instructions ol li {
-	padding: 0 20x 20px 0;
-}
-
-
-
 
 /* BEGIN MOBILE CSS */
 @media only screen and (max-device-width: 480px) {
