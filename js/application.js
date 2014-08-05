@@ -4,12 +4,11 @@ $(document).ready(function() {
 //add list items
 function handleAddItem() {
 
-		var txtbox = document.getElementById('enter-item');
-		var itemtext = txtbox.value;
+		var itemtext = ($("#enter-item").val());
 		event.preventDefault();
 
 			$('<li class="list-item" class="edit-item"></li>').appendTo('#list').html('<div class="item-container"><span class="display">' + itemtext + '</span><input type="text" class="edit"/><div class="line-menu"><div class="delete">&times;</div><div class="editbox"></div><div class="mark"></div></div></div>');
-		txtbox.value = '';
+		($("#enter-item").val(''));
 	}
 
 
